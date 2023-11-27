@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 메타 정보 및 문서 정보 설정 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FHFAA.register</title>
+    <link rel="stylesheet" href="css/css.css"> <!-- 외부 스타일 시트 연결 -->
+</head>
+
+<body>
+    <!-- 게시판 영역 -->
+    <div class="board_wrap">
+        <!-- 게시판 제목 영역 -->
+        <div class="board_title">
+            <strong>동물 등록 문의 게시판</strong>
+            <p>빠르게 확인하겠습니다.</p>
+        </div>
+        
+        <!-- 글쓰기 영역 -->
+        <div class="board_write_wrap">
+            <div class="board_write">
+                <!-- 제목 입력 영역 -->
+                <div class="title">
+                    <dl>
+                        <dt>제목</dt>
+                        <dd><input type="text" id="titleInput" placeholder="제목 입력"></dd>
+                    </dl>
+                </div>
+                
+                <!-- 글쓴이 및 비밀번호 입력 영역 -->
+                <div class="info">
+                    <dl>
+                        <dt>글쓴이</dt>
+                        <dd><input type="text" id="authorInput" placeholder="글쓴이 입력"></dd>
+                    </dl>
+                    <dl>
+                        <dt>비밀번호</dt>
+                        <dd><input type="password" id="passwordInput" placeholder="비밀번호 입력"></dd>
+                    </dl>
+                </div>
+                
+                <!-- 내용 입력 영역 -->
+                <div class="cont">
+                    <textarea id="contentInput" placeholder="내용 입력"></textarea>
+                </div>
+                
+                <!-- 파일 선택 영역 -->
+                <div class="file">
+                    <label for="fileInput">파일 선택</label>
+                    <input type="file" id="fileInput" name="fileInput" accept="image/*">
+                </div>
+            </div>
+            
+            <!-- 버튼 영역 -->
+            <div class="bt_wrap">
+                <a href="#" class="on" onclick="showConfirmation()">등록</a>
+                <a href="list.html">취소</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 등록 확인 팝업 -->
+    <div id="confirmationPopup" class="popup">
+        <div class="popup-content">
+            <p>등록하시겠습니까?</p>
+            <button onclick="register()">등록</button>
+            <button onclick="closePopup()">취소</button>
+        </div>
+    </div>
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
